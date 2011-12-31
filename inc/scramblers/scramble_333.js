@@ -1687,14 +1687,7 @@ var Cnk, ckmv, ckmv2, cornerColor, cornerFacelet, edgeColor, edgeFacelet, fact, 
           drawSquare(r, w, h, drawingCenters[i][0] + (k-1)*width, drawingCenters[i][1] + (j-1)*width, width/2, colorScheme[face]);
 		  if(k==1 && j==1)
 		  {
-		  if(i==1||i==4)
-		  {
-		  attrib = {fill: "#fff", stroke: "#fff", font:"Helvetica"}
-		  }
-		  else
-		  {
-		  attrib = {fill: "#000", stroke: "#000", font:"Helvetica"}
-		  }
+		  attrib = {fill: "#000", stroke: "#000", font:"12px Helvetica"}
 		  var Label = r.text(drawingCenters[i][0]+20, drawingCenters[i][1], face).attr(attrib);
 		  }
         }
@@ -1736,7 +1729,7 @@ var Cnk, ckmv, ckmv2, cornerColor, cornerFacelet, edgeColor, edgeFacelet, fact, 
 
   return {
     /* mark2 interface */
-    version: "December 24, 2011",
+    version: "December 31, 2011",
     initialize: ini,
     setRandomSource: setRandomSource,
     getRandomScramble: getRandomScramble,

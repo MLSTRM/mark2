@@ -508,7 +508,9 @@ scramblers["222"] = (function() {
     var colorString = "wrgoby"; // UFRLBD
 
     var r = Raphael(parentElement, w, h);
-
+	var Labeltext = ["U","L","F","R","B","D"];
+	var z = {stroke: "#000", fill: "#000",font:"20px Helvetica", size:width, opcaity:0.5};
+	var x = 0;
     var s="",i,f,d=0,q;
     ori = 0;
     d=0;
@@ -524,6 +526,24 @@ scramblers["222"] = (function() {
           drawSquare(r, w, h, border + width /2 + f*width + gap*Math.floor(f/2), border + width /2 + i*width + gap*Math.floor(i/2), width/2, col);
           //s+="<td style='background-color:"+colorList[colors[c]+2]+"'><img src='scrbg/"+colorList[colors[c]+1]+"' width=10 border=1 height=10><\/td>";
         }
+		var Labelorigin = scalePoint(w,h,[border + (f-(cubeSize/2))*width + gap*Math.floor(f/cubeSize)+(width/2), border + (i-(cubeSize/2))*width + gap*Math.floor(i/cubeSize)+(width/2)]);
+			if(i==(3*size-1)||i==(size-1))
+			{
+				if(f==(2*size)-1)
+				{
+					var Label = r.text(Labelorigin[0], Labelorigin[1], Labeltext[x]).attr(z);
+					x++;
+				}
+			}
+			if(i==(2*size-1))
+			{
+				if((f+1)%size==0)
+				{
+				var Label = r.text(Labelorigin[0], Labelorigin[1], Labeltext[x]).attr(z);
+				x++;
+				}
+			
+            }
         d++;
       }
       s+="<\/tr>";

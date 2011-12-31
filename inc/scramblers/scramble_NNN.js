@@ -281,25 +281,52 @@ if (typeof scramblers === "undefined") {
 
         var r = Raphael(parentElement, w, h);
 
+		var Labeltext = ["U","L","F","R","B","D"];
+		var x=0;
         var s="",i,f,d=0,q;
+		var z = {stroke: "#000", fill: "#000",font:"20px Helvetica", size:width, opcaity:0.5};
         ori = 0;
         d=0;
         s="<table border=0 cellpadding=0 cellspacing=0>";
         for(i=0;i<3*size;i++){
           s+="<tr>";
-          for(f=0;f<4*size;f++){
-            if(flat2posit[d]<0){
+          for(f=0;f<4*size;f++)
+		  {
+		  
+            if(flat2posit[d]<0)
+			{
               s+="<td><\/td>";
-            }else{
+            }
+			else
+			{
               var c = colorPerm[ori][state[flat2posit[d]]];
               var col = colorList[colors[c]+0];
               drawSquare(r, w, h, border + width /2 + f*width + gap*Math.floor(f/cubeSize), border + width /2 + i*width + gap*Math.floor(i/cubeSize), width/2, col);
               //s+="<td style='background-color:"+colorList[colors[c]+2]+"'><img src='scrbg/"+colorList[colors[c]+1]+"' width=10 border=1 height=10><\/td>";
+			 }
+			var Labelorigin = scalePoint(w,h,[border + (f-(cubeSize/2))*width + gap*Math.floor(f/cubeSize)+(width), border + (i-(cubeSize/2))*width + gap*Math.floor(i/cubeSize)+(width)]);
+			if(i==(3*size-1)||i==(size-1))
+			{
+				if(f==(2*size)-1)
+				{
+					var Label = r.text(Labelorigin[0], Labelorigin[1], Labeltext[x]).attr(z);
+					x++;
+				}
+			}
+			if(i==(2*size-1))
+			{
+				if((f+1)%size==0)
+				{
+				var Label = r.text(Labelorigin[0], Labelorigin[1], Labeltext[x]).attr(z);
+				x++;
+				}
+			
             }
             d++;
           }
           s+="<\/tr>";
         }
+		
         s+="<\/table>";
         return(s);
       }
