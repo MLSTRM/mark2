@@ -284,7 +284,7 @@ if (typeof scramblers === "undefined") {
 		var Labeltext = ["U","L","F","R","B","D"];
 		var x=0;
         var s="",i,f,d=0,q;
-		var z = {stroke: "#000", fill: "#000",font:"20px Helvetica", size:width, opcaity:0.5};
+		var z = {stroke: "#000", fill: "#000",font:"20px Helvetica", size:width, opacity:0.5};
         ori = 0;
         d=0;
         s="<table border=0 cellpadding=0 cellspacing=0>";
@@ -532,7 +532,7 @@ if (typeof scramblers === "undefined") {
 
       /* mark2 interface */
       return {
-        version: "December 23, 2011",
+        version: "December 29, 2011",
         initialize: initializeFull,
         setRandomSource: setRandomSource,
         getRandomScramble: getRandomScramble,
