@@ -1685,6 +1685,18 @@ var Cnk, ckmv, ckmv2, cornerColor, cornerFacelet, edgeColor, edgeFacelet, fact, 
         for (var k = 0; k < 3; k++) {
           var face = stateWithCenters[drawingStickerMap[i][j][k]];
           drawSquare(r, w, h, drawingCenters[i][0] + (k-1)*width, drawingCenters[i][1] + (j-1)*width, width/2, colorScheme[face]);
+		  if(k==1 && j==1)
+		  {
+		  if(i==1||i==4)
+		  {
+		  attrib = {fill: "#fff", stroke: "#fff", font:"Helvetica"}
+		  }
+		  else
+		  {
+		  attrib = {fill: "#000", stroke: "#000", font:"Helvetica"}
+		  }
+		  var Label = r.text(drawingCenters[i][0]+20, drawingCenters[i][1], face).attr(attrib);
+		  }
         }
       }
     }
