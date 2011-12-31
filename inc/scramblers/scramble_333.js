@@ -1688,7 +1688,7 @@ var Cnk, ckmv, ckmv2, cornerColor, cornerFacelet, edgeColor, edgeFacelet, fact, 
 		  if(k==1 && j==1)
 		  {
 		  var LabelOrigin=scalePoint(w,h,[drawingCenters[i][0] + (k-1)*width, drawingCenters[i][1] + (j-1)*width]);
-		  attrib = {fill: "#000", stroke: "#000", font:"12px Helvetica"}
+		  attrib = {fill: "#000", stroke: "#000", font:"20px Helvetica", opacity:0.5}
 		  var Label = r.text(LabelOrigin[0], LabelOrigin[1], face).attr(attrib);
 		  }
         }
