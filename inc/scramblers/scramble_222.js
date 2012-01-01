@@ -509,7 +509,7 @@ scramblers["222"] = (function() {
 
     var r = Raphael(parentElement, w, h);
 	var Labeltext = ["U","L","F","R","B","D"];
-	var z = {stroke: "#000", fill: "#000",font:"20px Helvetica", size:width, opacity:0.5};
+	var z = {stroke: "#000", fill: "#000",font:"20px Helvetica", size:width, opacity:0.75};
 	var x = 0;
     var s="",i,f,d=0,q;
     ori = 0;
