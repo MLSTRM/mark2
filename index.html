@@ -38,7 +38,14 @@
 
 <div class="interface" id="top_interface">
 	<center>
-		<h1 id="title"><img src="inc/wca_logo.svg" class="wca_logo_top"> <!--WCA Official Puzzle Scrambler: <span class="mark2_title"-->Mark 2 <span class="beta">BETA</span></span></h1><br>
+	<h1 id="title">
+	<!--[if lte IE 8]>
+		<img src="inc/mark2_logo.png" class="wca_logo_top">
+		<![endif]-->
+		<!--[if !(lte IE 8)]>
+		<img src="inc/mark2_logo.svg" class="wca_logo_top">
+		<![endif]-->
+		<!--WCA Official Puzzle Scrambler: <span class="mark2_title"-->Mark 2 <span class="beta">BETA</span></span></h1><br>
 
 		<input id="competitionName" value="" placeholder="Competition Name" onchange="scramble.updateHash();" onkeyup="scramble.updateHash();"/>
 	<br><br>
