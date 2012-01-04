@@ -385,16 +385,19 @@ h1 {
 }
 
 .scramble_table td.scramble_minx {
-  font-family: monospace;
-  font-size: 90%;
+  font-family: Helvetica;
+  font-size: 12px;
 }
 
 .scramble_table td.scramble_clock {
-  font-family: monospace;
-  font-size: 140%;
+  font-family: Helvetica;
+  font-size: 120%;
 }
 
-
+.scramble_table td.scramble_sq1 {
+  font-family: Helvetica;
+  font-size: 120%;
+}
 
 .scramble_set .footer_table {
   width: 100%;
